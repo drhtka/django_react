@@ -6,7 +6,7 @@ from react3.views import reactDef3, reactDefDz3
 
 
 urlpatterns = {
-    path('3', reactDef3),
-    path('3dz', reactDefDz3),
+    path('3/', reactDef3),
+    path('dz/', reactDefDz3),
 }
 

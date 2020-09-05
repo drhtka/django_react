@@ -2,13 +2,11 @@
 from django.conf.urls import url
 from django.urls import path
 
-from react.views import reactDef, reactDefDz1
+from react4.views import reactDef4, reactDefDz4
 
 
 urlpatterns = {
-    path('1/', reactDef),
-    path('dz/', reactDefDz1),
+    path('4/', reactDef4),
+    path('dz/', reactDefDz4),
 }
-
-
 

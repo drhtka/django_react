@@ -7,6 +7,6 @@ from react2.views import reactDef2, reactDefDz2
 
 urlpatterns = {
     path('2/', reactDef2),
-    path('2dz/', reactDefDz2),
+    path('dz/', reactDefDz2),
 }
 

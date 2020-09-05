@@ -22,7 +22,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('react/', include('react.urls')),
+    path('react1/', include('react.urls')),
     path('react2/', include('react2.urls')),
     path('react3/', include('react3.urls')),
+    path('react4/', include('react4.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
