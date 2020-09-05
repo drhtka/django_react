@@ -1,4 +1,4 @@
-class App extends React.Component{
+class AppDz extends React.Component{
     constructor() {
         super();
         // помогает обращаться (запускат методы у себя из класса react.component)
@@ -24,16 +24,16 @@ class App extends React.Component{
     /*<!-- выведем даные из сайта: -->*/
     render() {//  render зарезервированное имя в реакте выводит даные
         return <div>
-        <div>имя: {this.state.name}</div> возраст: {this.state.years}
-        <div><img class="im" src={this.state.image}/></div>
+            <div>имя: {this.state.name}</div> возраст: {this.state.years}
+            <div><img class="im" src={this.state.image}/></div>
             <span>Подпись: {this.state.image_name}</span>
-        <div><button onClick={this.mytest}>TestMe</button></div>
+            <div><button onClick={this.mytest}>TestMe</button></div>
         </div>;
     }
 }
 
 //  заливаем из виртуального дома при помощи обращения к айди
 ReactDOM.render(
-<App/>,
-    document.getElementById('app')
+    <AppDz/>,
+    document.getElementById('appdz')
 );

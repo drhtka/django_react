@@ -12,9 +12,3 @@ def reactDef(request):
 
 def reactDefDz1(request):
     return TemplateResponse(request, 'react/reactdz1.html')
-
-def reactDef3(request):
-    return TemplateResponse(request, 'react/react3.html')
-
-def reactDefDz3(request):
-    return TemplateResponse(request, 'react/reactdz3.html')
