@@ -1,5 +1,5 @@
 
-<h3 align="center">[Индивидуальные OnLine уроки по web технологиям WEBYK](https://www.webyk.in.net/)</h3>
+[Индивидуальные OnLine уроки по web технологиям WEBYK](https://www.webyk.in.net/)
 
 <h4 align="center">Изучене и практика ReactJS </h4>
 <p>Мы сможем научиться делать нагруженные веб-приложения, познакомимся с реактивной загрузкой данных в DOM-дерево. 
