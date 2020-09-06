@@ -6,7 +6,7 @@ from react.views import reactDef, reactDefDz1
 
 
 urlpatterns = {
-    path('1/', reactDef),
+    path('', reactDef),
     path('dz/', reactDefDz1),
 }
 
