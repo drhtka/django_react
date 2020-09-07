@@ -3,24 +3,26 @@
     constructor() {
     super();
     this.state = {
-    obj: ['name', 'price', '/static/react3/img/Nokia-105.jpg'],
+    obj: [{name: 'iphon1', price: 600, img: '/static/react3/img/Nokia-105.jpg'},
+        {name: 'iphon2', price: 800, img: '/static/react3/img/Nokia-105.jpg'}],
     text : ''}
 }
     render(){
     const list = this.state.obj.map((item, index)=>{
-    return <li key={index}>{item}</li>
+
+        return <li key={index}>{item.name}
+        <div>{item.price}</div>
+         <img className='img_size' src={item.img} /></li>
+
 })
-    return <div>
-    <ul>{list[0]}
-    {list[1]}
-    {list[2]}
-    <img className="im" src={list[2]}/>
-    </ul>
-    react
-    </div>;
-}
-}
+        return <div>
+            {list}
+               </div>;
+      }
+    }
     ReactDOM.render(
     <AppDz3/>,
     document.getElementById('app3dz')
     );
+
+

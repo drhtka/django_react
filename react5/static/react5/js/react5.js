@@ -29,7 +29,6 @@ class App5 extends React.Component{
 
     render() {
         return <div>
-
             <form action="" onSubmit={this.chekMyForm.bind(this)}>
                 <input type="text" placeholder='login' onChange={this.chageLogin.bind(this)}/>
                 <input type="password" placeholder='password' onChange={this.changePass.bind(this)}/>
@@ -38,6 +37,7 @@ class App5 extends React.Component{
         </div>;
     }
 }
+// Элемент формы имеет событие onSubmit, которое может быть обработано для выполнения валидации.
 // вызываем bind и передаем в нем this для контроля данных ввода
 // onSubmit отслеживает отправку данных
 // форма не может быть подтверждена, если еe есобытие onSubmit возвпращвет false
