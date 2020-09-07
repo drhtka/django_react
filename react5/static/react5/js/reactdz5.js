@@ -3,8 +3,9 @@ class AppDz5 extends React.Component{
         super();
         this.state = { text : '', mylogin: '', mypass: '', classlogin: '', classpass: ''}
     }
-
-    chageLogin(event){
+//  mylogin mypass   эти переменные для выборки записанного в input
+//  classlogin  classpass эти переменные для подсвечивания рамки поля input при помощи css
+    changeLogin(event){
         // метод будет ждать что введется в поле login
         this.setState({mylogin:event.target.value}) // перезаписываем mylogin тем что будет в input
     }
@@ -33,7 +34,7 @@ class AppDz5 extends React.Component{
     render() {
         return <div>
             <form action="" onSubmit={this.chekMyForm.bind(this)}>
-                <input className={this.state.classlogin} type="text" placeholder='login' onChange={this.chageLogin.bind(this)}/>
+                <input className={this.state.classlogin} type="text" placeholder='login' onChange={this.changeLogin.bind(this)}/>
                 <input className={this.state.classpass} type="password" placeholder='password' onChange={this.changePass.bind(this)}/>
                 <button>Enter</button>
             </form>
@@ -43,6 +44,7 @@ class AppDz5 extends React.Component{
 // вызываем bind и передаем в нем this для контроля данных ввода
 // onSubmit отслеживает отправку данных
 // форма не может быть подтверждена, если еe есобытие onSubmit возвпращвет false
+//onChange возникает при изменении значения эллемнта формы, вроде текстового поля или списка(применяется тегам input, keygen, select, textarea)
 ReactDOM.render(
     <AppDz5/>,
     document.getElementById('appdz5')
