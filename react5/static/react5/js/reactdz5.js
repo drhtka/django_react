@@ -21,13 +21,15 @@ class AppDz5 extends React.Component{
         }
         else {
             this.setState({classlogin:'success'});
+            // мы зависим от первого а потом заносим во второй else чтоб не забивать память
+            if(this.state.mypass.length == 0 ){ // делаем в else чтоб не проверяло одновременно все а по очереди
+                this.setState({classpass: 'error'})
+            }
+            else {
+                this.setState({classpass: 'success'})
+            }
         }
-        if(this.state.mypass.length == 0 ){
-            this.setState({classpass: 'error'})
-        }
-        else {
-            this.setState({classpass: 'success'})
-        }
+
         console.log(this.state.mylogin, this.state.mypass)
     }
 
