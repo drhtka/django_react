@@ -28,4 +28,5 @@ urlpatterns = [
     path('react4/', include('react4.urls')),
     path('react5/', include('react5.urls')),
     path('react6/', include('react6.urls')),
+    path('react7/', include('react7.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
