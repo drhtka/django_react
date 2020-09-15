@@ -5,9 +5,9 @@ class AppDz7 extends React.Component{
         super();
         // помогает обращаться (запускат методы у себя из класса react.component)
         this.state = {  // state состояние глобальня память
-            tovars: [{name: 'iphone b7', price: 600, img: '/static/react7/img/Nokia-105.jpg'},
-                    {name: 'samsung j4', price: 700, img: '/static/react7/img/Nokia-105.jpg'},
-                    {name: 'lenovo', price: 800, img: '/static/react7/img/Nokia-105.jpg'}], // временые перменные
+            tovars: [{name: 'iphone b7', price: 600, img: '/static/react9/img/Nokia-105.jpg'},
+                    {name: 'samsung j4', price: 700, img: '/static/react9/img/Nokia-105.jpg'},
+                    {name: 'lenovo', price: 800, img: '/static/react9/img/Nokia-105.jpg'}], // временые перменные
             tmptovar : '', name: '', price: '', img: ''}
     }
 
@@ -59,9 +59,11 @@ class AppDz7 extends React.Component{
             <div className='block test'>3</div>
              </div>
             <div>
-            <img style={{ height: '100px', width: '100px', position: 'absolute', marginTop: '10px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid' }} src={'/static/react7/img/Nokia-105.jpg'}/>
-            <img style={{ height: '100px', width: '100px', position: 'string', marginTop: '120px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid'}} src={'/static/react7/img/Nokia-105.jpg'}/>
-            <img style={{ height: '100px', width: '100px', position: 'absolute', marginTop: '230px', marginLeft:' -103px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid'}} src={'/static/react7/img/Nokia-105.jpg'}/>
+            <img style={{ height: '100px', width: '100px', display: 'block', marginTop: '10px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid' }} src={'/static/react9/img/Nokia-105.jpg'}/>
+            <img style={{ height: '100px', width: '100px', display: 'block', marginTop: '120px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid'}} src={'/static/react9/img/Nokia-105.jpg'}/>
+            <img style={{ height: '100px', width: '100px', display: 'block', marginTop: '230px', marginLeft:' -103px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid'}} src={'/static/react9/img/Nokia-105.jpg'}/>
+             <img style={{ height: '100px', width: '100px', display: 'block', marginTop: '1000px', border: '2px', borderColor: '#ffa94d', borderStyle: 'solid' }} src={'/static/react9/img/Nokia-105.jpg'}/>
+
             </div>
 
         </div>;

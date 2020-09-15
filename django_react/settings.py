@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'react5.apps.React5Config',
     'react6.apps.React6Config',
     'react7.apps.React7Config',
+    'react8.apps.React8Config',
+    'react9.apps.React9Config',
 ]
 
 MIDDLEWARE = [
@@ -141,6 +143,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "react5/static"),
     os.path.join(BASE_DIR, "react6/static"),
     os.path.join(BASE_DIR, "react7/static"),
+    os.path.join(BASE_DIR, "react9/static"),
+    os.path.join(BASE_DIR, "react9/static"),
     # os.path.join(BASE_DIR, 'collectstatic'),
     # потом проверить что офайлы работают и с static
 

@@ -3,9 +3,9 @@ class AppDz6 extends React.Component{
         super();
         // помогает обращаться (запускат методы у себя из класса react.component)
         this.state = {  // state состояние глобальня память
-            tovars: [{name: 'iphone b7', price: 600, img: '/static/react7/img/Nokia-105.jpg'},
-                    {name: 'samsung j4', price: 700, img: '/static/react7/img/Nokia-105.jpg'},
-                    {name: 'lenovo', price: 800, img: '/static/react7/img/Nokia-105.jpg'}], // временые перменные
+            tovars: [{name: 'iphone b7', price: 600, img: '/static/react9/img/Nokia-105.jpg'},
+                    {name: 'samsung j4', price: 700, img: '/static/react9/img/Nokia-105.jpg'},
+                    {name: 'lenovo', price: 800, img: '/static/react9/img/Nokia-105.jpg'}], // временые перменные
             tmptovar : '', name: '', price: '', img: ''}
     }
 
