@@ -6,10 +6,11 @@ class AppDz9 extends React.Component{
             tovars: ['iphone b7', 'samsung j4', 'lenovo'], // временые перменные
 
             itemtovars:[
-                {name: 'iphone b7', price: '123', old: 25},
-                {name: 'lenovo', price: '321', old: 15},
-                {name: 'samsung', price: '232', old: 5},
-                {name: 'iphone x', price: '434', old: 50}],
+                {name: 'iphone b7', price: '123', old: 25, categ: 'apple'},
+                {name: 'lenovo xxx', price: '321', old: 15, categ: 'lenovo'},
+                {name: 'samsung', price: '232', old: 5,categ: 'samsung'},
+                {name: 'iphone x', price: '434', old: 50, categ: 'apple'}
+                ],
 
             tmptovar : ''}
     }

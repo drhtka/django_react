@@ -21,19 +21,19 @@ class AppDz8 extends React.Component{
             let tmpTovars = this.state.itemtovars;
             this.sortTovars(tmpTovars)
             console.log(tmpTovars)
-            this.setState({itemtovars: tmpTovars}) // записываем в стейт пересортированные товары
+            this.setState({itemtovars:tmpTovars}) // записываем в стейт пересортированные товары
             //console.log('up')
         }else if(event.target.value == '2'){
             //console.log('down')
         }
-
+        let tmpTovarsOld = this.state.itemtovars;
         if(event.target.value == '3'){
-            let tmpTovarsOld = this.state.itemtovars;
             this.sortOlds(tmpTovarsOld)
-            console.log(tmpTovarsOld)
-            this.setState({itemtovars: tmpTovarsOld})
-        }else {
-            //console.log('down')
+            //console.log(tmpTovarsOld)
+            this.setState({itemtovars:tmpTovarsOld})
+        }else if(event.target.value == '4'){
+            this.sortOldsDown(tmpTovarsOld)
+            this.setState({itemtovars:tmpTovarsOld})
         }
     }
     //сортируем товары по возростанию
@@ -61,6 +61,15 @@ class AppDz8 extends React.Component{
 
         });
     }
+    sortOldsDown(itemTovars){
+        itemTovars.sort(function (a, b) {
+            if(a.old < b.old){
+                return 1;
+            }else {
+                return -1;
+            }
+        });
+    }
 
     render() {//  render зарезервированное имя в реакте выводит даные
         // в this.state.tovars. находится наш товар
@@ -75,6 +84,7 @@ class AppDz8 extends React.Component{
                 <option value='1'>по возрастанию цены</option>
                 <option value='2'>по убыванию цены</option>
                 <option value='3'>по возрастанию года выпуска</option>
+                <option value='4'>по убыванию года выпуска</option>
             </select>
             <ul>{list}</ul>
             <div className='react'>hello react</div>
