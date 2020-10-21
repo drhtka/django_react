@@ -18,7 +18,12 @@ class App9 extends React.Component{
                 {name: 'iphone x', price: 434, categ: 'apple'}
             ],
 
+            chek_box:[
+
+            ],
+
             tmptovar : ''}
+
     }
 
     mySort(event){
@@ -67,32 +72,108 @@ class App9 extends React.Component{
             });
     }
     sortCateg(event){
-        if(event.target.value == '0'){
-            let item = ''
-            for (item of this.state.itemtovars){
-                if (item.categ == "apple"){
-                    console.log(item.name)
+        //console.log(this.state.chek_box)
+        let tmp_check_boxes = []
+        tmp_check_boxes = this.state.chek_box // перезаписали все что лежит в глобальном chek_box
+        if (tmp_check_boxes.length == 0){
+            tmp_check_boxes.push(event.target.value)// то что нажато в чекбоксе
+            this.setState({chek_box:tmp_check_boxes}) // перезаписываем новый чебокс в глобальный массив
+
+            let tmp_array = []
+            if(event.target.value == '0'){
+                let item = ''
+
+                for (item of this.state.itemtovarsorig){
+                    if (item.categ == "apple"){
+                        //console.log(item.name)
+                        tmp_array.push(item)
+                    }
                 }
-             }
-            //console.log('eto apple')
-        }
-        if(event.target.value == '1'){
-            //alert('eto lenovo')
-            let item = ''
-            for (item of this.state.itemtovars){
-                if (item.categ == "lenovo"){
-                    console.log(item.name)
+                //console.log(tmp_array)
+            }
+            if(event.target.value == '1'){
+                //alert('eto lenovo')
+                let item = ''
+                for (item of this.state.itemtovarsorig){
+                    if (item.categ == "lenovo"){
+                        //console.log(item.name)
+                        tmp_array.push(item)
+
+                    }
                 }
             }
-        }
-        if(event.target.value == '2'){
-            //alert('eto samsung')
-            let item = ''
-            for (item of this.state.itemtovars){
-                if (item.categ == "samsung"){
-                    console.log(item.name)
+            if(event.target.value == '2'){
+                //alert('eto samsung')
+                let item = ''
+                for (item of this.state.itemtovarsorig){
+                    if (item.categ == "samsung"){
+                        //console.log(item.name)
+                        tmp_array.push(item)
+                    }
+                }
+            }//console.log(tmp_array)
+            this.setState({itemtovars: tmp_array})
+        }else {
+            //alert('puolno')
+            //alert(event.target.value)
+
+            let tmp_array = []
+            tmp_check_boxes = this.state.chek_box // перезаписали все что лежит в глобальном chek_box
+            console.log('spisok filtrov')
+            console.log(tmp_check_boxes)
+            console.log(event.target.value)
+            if(event.target.value == '0'){
+                let item = ''
+
+                for (item of this.state.itemtovarsorig){
+                    if (item.categ == "apple"){
+                        //console.log(item.name)
+                        tmp_array.push(item)
+                    }
+                }
+                //console.log(tmp_array)
+            }
+            if(event.target.value == '1'){
+                //alert('eto lenovo')
+                let item = ''
+                for (item of this.state.itemtovarsorig){
+                    if (item.categ == "lenovo"){
+                        //console.log(item.name)
+                        tmp_array.push(item)
+
+                    }
                 }
             }
+            if(event.target.value == '2'){
+                //alert('eto samsung')
+                let item = ''
+                for (item of this.state.itemtovarsorig){
+                    if (item.categ == "samsung"){
+                        //console.log(item.name)
+                        tmp_array.push(item)
+                    }
+                }
+
+        }
+           console.log('1111')
+            //console.log(tmp_array)
+            var tmp_item_tovars = this.state.itemtovars // чтоб добавть в товары еще одну категорию
+            // накапливаем товары которые выбраны
+            var item = ''
+            // console.log('tmp_array')
+            // console.log(tmp_array)
+            // console.log('tmp_item_tovars')
+            // console.log(tmp_item_tovars)
+            for(item of tmp_array){
+                console.log(item)
+                tmp_item_tovars.push(item)
+
+            }
+
+            console.log('tmp_item_tovars2')
+            console.log(tmp_item_tovars)
+            this.setState({itemtovars: tmp_item_tovars})
+
         }
     }
 

@@ -38,7 +38,7 @@ class App7 extends React.Component{
             </form>
 
             <ul>{list}</ul>
-            <div class='react'>hello react</div>
+            <div className='react'>hello react</div>
             <div style={{background: 'orange', color: 'blue'}}>hello</div>
         </div>;
     }

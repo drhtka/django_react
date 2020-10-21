@@ -22,7 +22,7 @@
     }
     ReactDOM.render(
     <AppDz3/>,
-    document.getElementById('app3dz')
+    document.getElementById('appdz3')
     );
 
 

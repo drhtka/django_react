@@ -35,5 +35,5 @@ class AppDzz2 extends React.Component{
 //  заливаем из виртуального дома при помощи обращения к айди
 ReactDOM.render(
     <AppDzz2/>,
-    document.getElementById('app2dz')
+    document.getElementById('appdz2')
 );

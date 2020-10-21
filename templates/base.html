@@ -4,9 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     {% block title %}<title>ReactJS</title>{% endblock title %}
     <link type="text/css" rel="stylesheet" href="{% static "react/css/style.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "react2/css/style2.css" %}">
@@ -17,29 +15,42 @@
     <link type="text/css" rel="stylesheet" href="{% static "react7/css/style7.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "react8/css/style8.css" %}">
     <link type="text/css" rel="stylesheet" href="{% static "react9/css/style9.css" %}">
+{% block css %}{% endblock css %}
 </head>
 <body style="height: 1500px">
+<div style="text-align: center">
+      <h2><a href="{% url 'index' %}">Главная</a></h2>
+</div>
 {% block content %}{% endblock %}
+<div id="root"></div>
 <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-<script type="text/babel" src="{% static "react/js/react1.js" %}"></script>
-<script type="text/babel" src="{% static "react/js/reactdz1.js" %}"></script>
-<script type="text/babel" src="{% static "react2/js/react2.js" %}"></script>
-<script type="text/babel" src="{% static "react2/js/reactdz2.js" %}"></script>
-<script type="text/babel" src="{% static "react3/js/react3.js" %}"></script>
-<script type="text/babel" src="{% static "react3/js/reactdz3.js" %}"></script>
-<script type="text/babel" src="{% static "react4/js/react4.js" %}"></script>
-<script type="text/babel" src="{% static "react4/js/reactdz4.js" %}"></script>
-<script type="text/babel" src="{% static "react5/js/react5.js" %}"></script>
-<script type="text/babel" src="{% static "react5/js/reactdz5.js" %}"></script>
-<script type="text/babel" src="{% static "react6/js/react6.js" %}"></script>
-<script type="text/babel" src="{% static "react6/js/reactdz6.js" %}"></script>
-<script type="text/babel" src="{% static "react7/js/react7.js" %}"></script>
-<script type="text/babel" src="{% static "react7/js/reactdz7.js" %}"></script>
-<script type="text/babel" src="{% static "react8/js/react8.js" %}"></script>
-<script type="text/babel" src="{% static "react8/js/reactdz8.js" %}"></script>
-<script type="text/babel" src="{% static "react9/js/react9.js" %}"></script>
-<script type="text/babel" src="{% static "react9/js/reactdz9.js" %}"></script>
+
+{% block react %}{% endblock react %}
+{% comment %}
+<div id="appdz"></div>
+
+<div id="app2"></div>
+
+<div id="appdz2"></div>
+
+<div id="app3"></div>
+<div id="appdz3"></div>
+<div id="app4"></div>
+<div id="appdz4"></div>
+<div id="app5"></div>
+<div id="appdz5"></div>
+<div id="app6"></div>
+
+<div id="appdz6"></div>
+<div id="app7"></div>
+<div id="appdz7"></div>
+<div id="app8"></div>
+<div id="appdz8"></div>
+<div id="app9"></div>{% endcomment %}
+
+
+
 </body>
 </html>

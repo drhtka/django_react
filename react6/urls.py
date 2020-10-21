@@ -5,10 +5,10 @@ from django.urls import path
 from react6.views import reactDef6, reactDefDz6
 
 
-urlpatterns = {
-    path('', reactDef6),
-    path('dz/', reactDefDz6),
-}
+urlpatterns = [
+    path('', reactDef6, name='react6'),
+    path('dz/', reactDefDz6, name='reactdz6'),
+]
 
 
 

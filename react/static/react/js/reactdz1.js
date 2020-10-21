@@ -25,7 +25,7 @@ class AppDz extends React.Component{
     render() {//  render зарезервированное имя в реакте выводит даные
         return <div>
             <div>имя: {this.state.name}</div> возраст: {this.state.years}
-            <div><img class="im" src={this.state.image}/></div>
+            <div><img className="im" src={this.state.image}/></div>
             <span>Подпись: {this.state.image_name}</span>
             <div><button onClick={this.mytest}>TestMe</button></div>
         </div>;

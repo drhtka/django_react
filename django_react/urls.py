@@ -19,9 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from index import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.Index, name='index'),
     path('react1/', include('react.urls')),
     path('react2/', include('react2.urls')),
     path('react3/', include('react3.urls')),

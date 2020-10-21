@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'index.apps.IndexConfig',
     'react.apps.ReactConfig',
     'react2.apps.React2Config',
     'react3.apps.React3Config',
@@ -135,7 +136,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
-
+    os.path.join(BASE_DIR, "index/static"),
     os.path.join(BASE_DIR, "react/static"),
     os.path.join(BASE_DIR, "react2/static"),
     os.path.join(BASE_DIR, "react3/static"),

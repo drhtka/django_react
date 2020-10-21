@@ -66,11 +66,24 @@ class AppDz9 extends React.Component{
         render() {//  render зарезервированное имя в реакте выводит даные
             // в this.state.tovars. находится наш товар
             const list = this.state.itemtovars.map((item, index)=>{
-                return <li key={index}>{item.name}<div>{item.price} $</div><div>{item.old} год</div></li>
+                return <table border="2">
+                    <tr>
+                        <td>Название</td>
+                        <td>Цена</td>
+                        <td>Год выпуска</td>
+                    </tr>
+                <tr>
+                    <div key={index}>
+                        <td>{item.name}</td>
+                        <td>{item.price} $</td>
+                        <td>{item.old} год</td>
+                    </div>
+            </tr>
+                </table>
             });
 
             return <div>
-                <div>Page9</div>
+                <div>PageDZ9</div>
                 <select name='' id='' onChange={this.mySort.bind(this)}>
                     <option value='0'>Сортировать товары по:</option>
                     <option value='1'>по возрастанию цены</option>
